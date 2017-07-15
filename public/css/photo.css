@@ -1,0 +1,17 @@
+body {
+    background-color: #d0e4fe
+}
+h1 {
+    background-color: beige;
+    text-align: center;
+}
+p {
+
+    background-color: rgb(180,180,180);
+    font-family:"Times New Roman";
+    font-size:50px;
+
+}
+h1.no1 {background-color: gold;}
+body.no1 {background-color: chartreuse;}
+p.no2 {background-color: gray; padding: 20px;}

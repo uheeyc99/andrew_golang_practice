@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/public/css/photo.css"  rel="stylesheet" type="text/css"/>
+</head>
+
+<body >
+
+<ol class="no1">
+    {{ range $.images}}
+    <li><a href="/view5?id={{.|urlquery}}">{{.|html}}</a></li>
+    {{end}}
+
+</ol>
+<ol >
+    {{ range $.images}}
+    <li><a href="/view5?id={{.|urlquery}}">{{.|html}}</a></li>
+    {{end}}
+
+</ol>
+
+</body>
+</html>
