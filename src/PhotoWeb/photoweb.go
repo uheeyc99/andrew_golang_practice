@@ -180,11 +180,16 @@ func main() {
 	http.HandleFunc("/", safeHandler(listHandler))  //用闭包
 	http.HandleFunc("/upload", safeHandler(uploadHandler))
 	http.HandleFunc("/view5", safeHandler(viewHandler))
-	//http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
-	http.FileServer(http.Dir("./"))
+	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
+	//go http.ListenAndServe(":9091",http.FileServer(http.Dir("./")))
+
 	err := http.ListenAndServe(":9090", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err.Error())
 	}
+
+
+
+
 
 }

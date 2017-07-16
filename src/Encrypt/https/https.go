@@ -11,8 +11,7 @@ const RESPONSE_TEMPLATE  = "hello"
 func rootHandler(w http.ResponseWriter,r *http.Request){
 	w.Header().Set("Content-Type","text/html")
 	w.Header().Set("Content-Length",fmt.Sprint(len(RESPONSE_TEMPLATE)))
-	fmt.Sprint("1")
-	fmt.Sprint(r.Header)
+	//fmt.Println(r.Header)
 	w.Write([]byte(RESPONSE_TEMPLATE))
 }
 
